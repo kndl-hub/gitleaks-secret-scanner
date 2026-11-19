@@ -9,4 +9,8 @@ description = "Published AWS example used in the classroom"
 path = '''(^|/)config\.py$'''
 regex = '''(?m)^AWS_ACCESS_KEY_ID\s*=\s*"(AKIAIOSFODNN7EXAMPLE)"'''
 secretGroup = 1
-https://github.com/kndl-hub/gitleaks-secret-scanner/actions/runs/44451819666/job/135317364971
+[[rules]]
+id = "myapp-key-rule"
+description = "My fictional application key"
+path = '''(^|/)config\.py$'''
+regex = '''\bMYAPP-KEY-[0-9]{6}\b'''
